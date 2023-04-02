@@ -26,11 +26,20 @@
 
       h2 { margin-top:    50px; }
       li { margin-bottom: 10px; }
+      video {
+	width:     100%;
+	max-width: 600px;
+      }
+      @media(max-width: 600px) {
+	br {
+	  display: none;
+	}
+      }
     </style>
   </head>
   <body>
     <h1>IPA to WARP ブックマークレット</h1>
-    <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくはドラッグ＆ドロップでブックマークのタブに持っていくとお使いいただけます。</p>
+    <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくは<br>ドラッグ＆ドロップでブックマークのタブに持っていくとお使いいただけます。</p>
     <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPA to WARP</a>
 
     <h2>使い方</h2>
