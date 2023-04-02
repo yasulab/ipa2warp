@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPAリダイレクトボタン</title>
+    <title>IPA to WARP Bookmarklet</title>
     <style>
         .bookmarklet-btn {
             display: inline-block;
@@ -26,7 +26,7 @@
     </style>
   </head>
   <body>
-    <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくはブックマークのタブにドラッグ＆ドロップすることでお使いいただけます。</p>
-    <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPAリダイレクト</a>
+    <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくはドラッグ＆ドロップでブックマークのタブに持っていくとお使いいただけます。</p>
+    <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPA to WARP</a>
   </body>
 </html>
