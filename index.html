@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPAリダイレクトボタン</title>
+    <style>
+        .bookmarklet-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 2px solid #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .bookmarklet-btn:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+  </head>
+  <body>
+    <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくはブックマークのタブにドラッグ＆ドロップすることでお使いいただけます。</p>
+    <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPAリダイレクト</a>
+  </body>
+</html>
