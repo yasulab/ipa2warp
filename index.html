@@ -86,8 +86,13 @@
 	align-items: center;
 	width: 210px;
       }
+
       .fb_iframe_widget > span {
 	vertical-align: baseline !important;
+      }
+      .fb-like > span {
+	vertical-align: baseline !important;
+	margin-top: 9px;
       }
     </style>
   </head>
@@ -111,20 +116,34 @@
 	<a href='https://github.com/yasulab/ipa2warp'>GitHub</a></small><br>
       <small>作った理由を見る →
 	<a href='https://twitter.com/yasulab/status/1642675864927350784'>Twitter</a> /
-	<a href='https://www.facebook.com/yasulab/posts/pfbid02cv6EYd1hvQ9ZqQL2ExHoVbn9uWNAQutULeQu8Gr5C17vURGhsuiLra8m1sogFcdJl'>Facebook</a></small><br>
+	<a href='https://facebook.com/yasulab/posts/pfbid02cv6EYd1hvQ9ZqQL2ExHoVbn9uWNAQutULeQu8Gr5C17vURGhsuiLra8m1sogFcdJl'>Facebook</a></small><br>
     </p>
 
     <div class="social-buttons">
       <div class="twitter-share-button">
-	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw&hashtags=ipa2warp" class="twitter-share-button" data-show-count="false">Tweet</a>
+	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw&hashtags=ipa2warp"
+	   class="twitter-share-button" data-show-count="false">Tweet</a>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
 
+      <div class="facebook-like-button">
+	<div class="fb-like"
+	 data-href="{{ site.url }}"
+	 data-layout="button_count"
+	 data-action="like"
+	 data-size="small"
+	 data-share="false"></div>
+      </div>
       <div class="facebook-share-button">
 	<div id="fb-root"></div>
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0" nonce="AqHN37Iu"></script>
-	<div class="fb-share-button" data-href="{{ site.url }}" data-layout="button_count" data-size="small"></div>
+	<script async defer crossorigin="anonymous"
+	 src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0" nonce="AqHN37Iu"></script>
+	<div class="fb-share-button"
+	 data-href="{{ site.url }}"
+	 data-layout="button_count"
+	 data-size="small"></div>
       </div>
+
     </div>
 
     <h2>デモ動画</h2>
