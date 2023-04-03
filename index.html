@@ -1,34 +1,37 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>IPA to WARP ブックマークレット</title>
-    <meta name="description" content="IPA 資料のリンク切れで困っている人向けに、ワンクリックで国立国会図書館のWebアーカイブ (WARP) にアクセスできるブックマークレットです。">
+    <title>{{ page.title | default: site.name }}</title>
+    <meta name="description" content="">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:site"        content="@yasulab">
-    <meta name="twitter:image"       content="/favicon.png">
-    <meta name="twitter:title"       content="IPA to WARP ブックマークレット">
-    <meta name="twitter:description" content="IPA 資料のリンク切れで困っている人向けに、ワンクリックで国立国会図書館のWebアーカイブ (WARP) にアクセスできるブックマークレットです。">
+    <meta name="twitter:image"       content="{{ site.url }}/favicon.png">
+    <meta name="twitter:site"        content="{{ page.title       | default: site.name }}">
+    <meta name="twitter:title"       content="{{ page.title       | default: site.name }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 
     <!-- OpenGraph -->
     <meta property="fb:admins"      content="715330868" />
     <meta property="fb:app_id"      content="680598798739780" />
-    <meta property="og:title"       content="IPA to WARP ブックマークレット">
-    <meta property="og:site_name"   content="IPA to WARP ブックマークレット">
-    <meta property="og:description" content="IPA 資料のリンク切れで困っている人向けに、ワンクリックで国立国会図書館のWebアーカイブ (WARP) にアクセスできるブックマークレットです。">
-    <meta property="og:url"         content="https://yasulab.github.io/ipa2warp/">
+    <meta property="og:title"       content="{{ page.title       | default: site.name }}">
+    <meta property="og:site_name"   content="{{ page.title       | default: site.name }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:url"         content="{{ site.url }}">
     <meta property="og:type"        content="website">
     <meta property="og:locale"      content="ja_JP">
-    <meta property="og:image"       content="/favicon.png">
+    <meta property="og:image"       content="{{ site.url }}/favicon.png">
     <meta property="og:image:type"  content="image/png">
 
-    <meta name="author"      content="@yasulab">
-    <meta name="copyright"   content="@yasulab">
-    <meta name="thumbnail"   content="/favicon.png">
+    <meta name="author"      content="{{ site.author }}">
+    <meta name="copyright"   content="{{ site.author }}">
+    <meta name="thumbnail"   content="{{ site.url }}/favicon.png">
     <meta name="robots"      content="index, follow">
     <meta name="keywords"    content="IPA,WARP,情報処理推進機構,国会図書館,リンク切れ,アーカイブ">
 
