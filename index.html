@@ -90,7 +90,7 @@
       }
 
       h2 { margin-top:    50px; }
-      li { margin-bottom: 10px; }
+      li { margin-bottom: 10px; margin-left: -10px; }
       video {
 	width:     100%;
 	max-width: 600px;
@@ -123,7 +123,7 @@
       }
 
       footer {
-	font-size: 80%;
+	font-size: 90%;
 	color: #777;
 	opacity: 0.7;
 	margin:  0 auto;
@@ -131,73 +131,85 @@
 	margin-bottom: 100px;
 	margin-left:   -1px;
 	width:   100%;
-	//text-align: center;
+	text-align: center;
+      }
+      @media(max-width: 600px) {
+	footer {
+	  text-align: center;
+	}
+      }
+      @media(min-width: 601px) {
+	footer {
+	  text-align: left;
+	}
       }
     </style>
   </head>
 
-  <body id="container">    
-    <h1>
-      IPA to WARP<br class='ignore-on-pc'>
-      ブックマークレット
-    </h1>
-    <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくは<br class='ignore-on-sp'>ドラッグ＆ドロップでブックマークのタブに持っていくとお使いいただけます。</p>
-    <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPA to WARP</a>
+  <body>
+    <div id="container">
+      <h1>
+	IPA to WARP<br class='ignore-on-pc'>
+	ブックマークレット
+      </h1>
+      <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくは<br class='ignore-on-sp'>ドラッグ＆ドロップでブックマークのタブに持っていくとお使いいただけます。</p>
+      <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPA to WARP</a>
 
-    <h2>使い方</h2>
-    <ol>
-      <li>以下の動画に沿ってブックマーク登録をする</li>
-      <li>リンク切れのページに行く<br>例: <a href='https://www.ipa.go.jp/jinzai/mitou/outline.html'>www.ipa.go.jp/jinzai/mitou/outline.html</a></li>
-      <li>先ほど登録したブックマークをクリックする</li>
-    </ol>
-    <p>
-      <small>ソースコードを見る	→
-	<a href='https://github.com/yasulab/ipa2warp'>GitHub</a></small><br>
-      <small>作った理由を見る →
-	<a href='https://twitter.com/yasulab/status/1642675864927350784'>Twitter</a> /
-	<a href='https://facebook.com/yasulab/posts/pfbid02cv6EYd1hvQ9ZqQL2ExHoVbn9uWNAQutULeQu8Gr5C17vURGhsuiLra8m1sogFcdJl'>Facebook</a></small><br>
-    </p>
+      <h2>使い方</h2>
+      <ol>
+	<li>以下の動画に沿ってブックマーク登録をする</li>
+	<li>リンク切れのページに行く<br><small>例: <a href='https://www.ipa.go.jp/jinzai/mitou/outline.html'>www.ipa.go.jp/jinzai/mitou/outline.html</a></small></li>
+	<li>先ほど登録したブックマークをクリックする</li>
+      </ol>
+      <p>
+	<small>ソースコードを見る	→
+	  <a href='https://github.com/yasulab/ipa2warp'>GitHub</a></small><br>
+	  <small>作った理由を見る →
+	    <a href='https://twitter.com/yasulab/status/1642675864927350784'>Twitter</a> /
+	    <a href='https://facebook.com/yasulab/posts/pfbid02cv6EYd1hvQ9ZqQL2ExHoVbn9uWNAQutULeQu8Gr5C17vURGhsuiLra8m1sogFcdJl'>Facebook</a></small><br>
+      </p>
 
-    <div class="social-buttons">
-      <div class="twitter-share-button">
-	<a href="https://twitter.com/share?ref_src=twsrc%5Etfw&hashtags=ipa2warp"
+      <div class="social-buttons">
+	<div class="twitter-share-button">
+	  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw&hashtags=ipa2warp"
 	   class="twitter-share-button" data-show-count="false">Tweet</a>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+
+	<!--
+	     <div class="facebook-like-button">
+	     <div class="fb-like"
+	     data-href="{{ site.url }}"
+	     data-layout="button_count"
+	     data-action="like"
+	     data-size="small"
+	     data-share="false"></div>
+	     </div>
+	-->
+
+	<div class="facebook-share-button">
+	  <div id="fb-root"></div>
+	  <script async defer crossorigin="anonymous"
+	   src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0" nonce="AqHN37Iu"></script>
+	  <div class="fb-share-button"
+	   data-href="{{ site.url }}"
+	   data-layout="button_count"
+	   data-size="small"></div>
+	</div>
+
       </div>
 
-      <!--
-      <div class="facebook-like-button">
-	<div class="fb-like"
-	 data-href="{{ site.url }}"
-	 data-layout="button_count"
-	 data-action="like"
-	 data-size="small"
-	 data-share="false"></div>
-      </div>
-      -->
+      <h2>デモ動画</h2>
+      <a href="https://gyazo.com/066a2fa7cc103f082d687711adbbaa0a"><video alt="Video from Gyazo" width="100%" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/066a2fa7cc103f082d687711adbbaa0a.mp4" type="video/mp4" /></video></a>
 
-      <div class="facebook-share-button">
-	<div id="fb-root"></div>
-	<script async defer crossorigin="anonymous"
-	 src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0" nonce="AqHN37Iu"></script>
-	<div class="fb-share-button"
-	 data-href="{{ site.url }}"
-	 data-layout="button_count"
-	 data-size="small"></div>
-      </div>
-
+      <footer>
+	<p><small>
+	  Created by
+	  <a href='https://twitter.com/yasulab'>@yasulab</a>.
+	  Powered by
+	  <a href='https://www.ruby-lang.org/ja'>Ruby</a> + <a href='https://pages.github.com/'>GitHub Pages</a>.
+	</small></p>
+      </footer>
     </div>
-
-    <h2>デモ動画</h2>
-    <a href="https://gyazo.com/066a2fa7cc103f082d687711adbbaa0a"><video alt="Video from Gyazo" width="100%" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/066a2fa7cc103f082d687711adbbaa0a.mp4" type="video/mp4" /></video></a>
-
-    <footer>
-      <p><small>
-	Created by
-	<a href='https://twitter.com/yasulab'>@yasulab</a>.
-	Powered by
-	<a href='https://www.ruby-lang.org/ja'>Ruby</a> + <a href='https://pages.github.com/'>GitHub Pages</a>.
-      </small></p>
-    </footer>     
   </body>
 </html>
