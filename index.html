@@ -43,6 +43,33 @@
     <meta name="theme-color" content="#ffffff">
     
     <style>
+      body {
+	font-family: 'Noto Sans JP', sans-serif;
+	margin-bottom: 100px;
+      }
+      #container{
+	margin-top:    1.0em;
+	margin-bottom: 1.0em;
+	margin-left:   auto;
+	margin-right:  auto;
+	padding-left:  0.5em;
+	padding-right: 0.5em;
+	
+	max-width: 840px;
+      }
+
+      p {
+	color: #242424;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 98%;
+      }
+      a {
+	text-decoration: none;
+      }
+      a:hover{
+	text-decoration: underline;
+      }
+
       .bookmarklet-btn {
         display: inline-block;
         padding: 10px 20px;
@@ -94,10 +121,22 @@
 	vertical-align: baseline !important;
 	margin-top: 9px;
       }
+
+      footer {
+	font-size: 80%;
+	color: #777;
+	opacity: 0.7;
+	margin:  0 auto;
+	margin-top:    30px;
+	margin-bottom: 100px;
+	margin-left:   -1px;
+	width:   100%;
+	//text-align: center;
+      }
     </style>
   </head>
 
-  <body>    
+  <body id="container">    
     <h1>
       IPA to WARP<br class='ignore-on-pc'>
       ブックマークレット
@@ -151,5 +190,15 @@
 
     <h2>デモ動画</h2>
     <a href="https://gyazo.com/066a2fa7cc103f082d687711adbbaa0a"><video alt="Video from Gyazo" width="100%" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/066a2fa7cc103f082d687711adbbaa0a.mp4" type="video/mp4" /></video></a>
+
+    <footer>
+      <p><small>
+	Created by
+	<a href='https://twitter.com/yasulab'>@yasulab</a>
+	for you.
+	Powered by
+	<a href='https://www.ruby-lang.org/ja'>Ruby</a> + <a href='https://pages.github.com/'>GitHub Pages</a>.
+      </small></p>
+    </footer>     
   </body>
 </html>
