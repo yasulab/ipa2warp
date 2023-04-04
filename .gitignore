@@ -1,3 +1,6 @@
+# Ignore editing files
+demo/
+
 # Ignore direnv
 .envrc
 
