@@ -215,7 +215,7 @@
 
       <script>
        document.getElementById("copyButton").addEventListener("click", function() {
-         var bookmarkletCode = "javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\\n]+@)?(?:www\\.)?([^:\\/\\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();";
+	 var bookmarkletCode = "javascript:(function()%7Bvar currentUrl=location.href;var newUrl=currentUrl.replace(/%5E(?:https?:%5C/%5C/)?(?:%5B%5E@%5Cn%5D+@)?(?:www%5C.)?(%5B%5E:%5C/%5Cn%5D+)/, %27https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp%27);window.location.href=newUrl;%7D)();"
          var textArea = document.createElement("textarea");
          textArea.value = bookmarkletCode;
          document.body.appendChild(textArea);
