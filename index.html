@@ -127,14 +127,14 @@
 
   <body>
     <div id="container">
-      <h1>
+      <h1 id='top'>
 	IPA to WARP<br class='ignore-on-pc'>
 	ブックマークレット
       </h1>
       <p>以下のボタンを右クリックして「ブックマークに追加」するか、もしくは<br class='ignore-on-sp'>ドラッグ＆ドロップでブックマークのタブに持っていくとお使いいただけます。</p>
       <a class="bookmarklet-btn" href="javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();">IPA to WARP</a>
 
-      <h2>使い方</h2>
+      <h2 id='howto'>使い方</h2>
       <ol>
 	<li>以下の動画に沿ってブックマーク登録をする</li>
 	<li>リンク切れのページに行く<br><small>例: <a href='https://www.ipa.go.jp/jinzai/mitou/outline.html'>www.ipa.go.jp/jinzai/mitou/outline.html</a></small></li>
@@ -177,7 +177,7 @@
 	</div>
       </div>
 
-      <h3>デモ動画</h3>
+      <h3 id='demo'>デモ動画</h3>
       <a href="https://gyazo.com/066a2fa7cc103f082d687711adbbaa0a"><video alt="Video from Gyazo" width="100%" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/066a2fa7cc103f082d687711adbbaa0a.mp4" type="video/mp4" /></video></a>
 
       
@@ -194,7 +194,7 @@
 	<li>画面の右下にある … をタップし、先ほど登録したブックマークをタップする</li>
       </ol>
 
-      <h3>デモ動画</h3>
+      <h3 id='mobile-demo'>デモ動画</h3>
       <div class='youtube'>
 	<iframe width="600" height="1000" src="https://www.youtube.com/embed/6HsyVRTvB2E" title="IPA to WARP デモ (iOS + Chrome)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
