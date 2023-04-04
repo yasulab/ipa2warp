@@ -17,9 +17,9 @@ https://yasulab.github.io/ipa2warp/
 
 https://user-images.githubusercontent.com/155807/229385900-1dc7430d-c361-43a3-b596-68a3f306b1d4.mp4
 
-<br>
+<br><br>
 
-## オマケ: スマホでも使えます
+## スマホでも使えます
 1. 上のボタンをタップする
 2. 画面の右下にある … をタップし、ブックマークに追加する
 3. 画面の右下に表示される「編集」をタップし、「URL」の欄にコピーしたコードを貼り付ける
@@ -29,7 +29,7 @@ https://user-images.githubusercontent.com/155807/229385900-1dc7430d-c361-43a3-b5
 
 https://user-images.githubusercontent.com/155807/229684318-42e5d0ce-7dd4-4ef8-a762-92281c47b843.mp4
 
-<br>
+<br><br>
 
 ## Author
 
