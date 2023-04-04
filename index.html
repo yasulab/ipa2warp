@@ -121,28 +121,6 @@
 	vertical-align: baseline !important;
 	margin-top: 9px;
       }
-
-      footer {
-	font-size: 90%;
-	color: #777;
-	opacity: 0.7;
-	margin:  0 auto;
-	margin-top:    30px;
-	margin-bottom: 100px;
-	margin-left:   -1px;
-	width:   100%;
-	text-align: center;
-      }
-      @media(max-width: 600px) {
-	footer {
-	  text-align: center;
-	}
-      }
-      @media(min-width: 601px) {
-	footer {
-	  text-align: left;
-	}
-      }
     </style>
   </head>
 
@@ -202,6 +180,60 @@
       <h2>デモ動画</h2>
       <a href="https://gyazo.com/066a2fa7cc103f082d687711adbbaa0a"><video alt="Video from Gyazo" width="100%" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/066a2fa7cc103f082d687711adbbaa0a.mp4" type="video/mp4" /></video></a>
 
+      <h2 id='mobile' style='margin-top: 200px;'>スマホで使う <small>(Chrome)</small></h2>
+      <div class="container">
+	<button id="copyButton" class="bookmarklet-btn">コードをコピーする</button>
+	<div id="popup" class="popup" style="display:none;">コピーしました！</div>
+      </div>
+      <ol>
+	<li>上のボタンをタップする</li>
+	<li>画面の右下にある … をタップし、ブックマークに追加する</li>
+	<li>画面の右下に表示される「編集」をタップし、URL にコピーしたコードを貼り付ける</li>
+	<li>リンク切れのページに行く<br><small>例: <a href='https://www.ipa.go.jp/jinzai/mitou/outline.html'>www.ipa.go.jp/jinzai/mitou/outline.html</a></small></li>
+	<li>画面の右下にある … をタップし、先ほど登録したブックマークをタップする</li>
+      </ol>
+
+      <style>
+	.container {
+	  display: inline-flex;
+	  align-items: center;
+	}
+
+	.popup {
+	  display: none;
+	  font-size: 50%;
+	  margin-left: 15px;
+	  padding: 5px 10px;
+	  background-color: #4CAF50;
+	  color: white;
+	  font-size: 14px;
+	  border-radius: 4px;
+	  opacity: 1;
+	  transition: opacity 0.3s;
+	}
+      </style>
+
+      <script>
+       document.getElementById("copyButton").addEventListener("click", function() {
+         var bookmarkletCode = "javascript:(function(){var currentUrl=location.href;var newUrl=currentUrl.replace(/^(?:https?:\/\/)?(?:[^@\\n]+@)?(?:www\\.)?([^:\\/\\n]+)/, 'https://warp.ndl.go.jp/info:ndljp/pid/12446699/www.ipa.go.jp');window.location.href=newUrl;})();";
+         var textArea = document.createElement("textarea");
+         textArea.value = bookmarkletCode;
+         document.body.appendChild(textArea);
+         textArea.select();
+         document.execCommand("copy");
+         document.body.removeChild(textArea);
+         showPopup();
+       });
+
+       function showPopup() {
+         var popup = document.getElementById("popup");
+         popup.style.display = "block";
+         setTimeout(function() {
+           popup.style.display = "none";
+         }, 3000);
+       }
+      </script>
+      
       <footer>
 	<p><small>
 	  Created by
@@ -210,6 +242,29 @@
 	  <a href='https://www.ruby-lang.org/ja'>Ruby</a> + <a href='https://pages.github.com/'>GitHub Pages</a>.
 	</small></p>
       </footer>
+      <style>
+	footer {
+	font-size: 90%;
+	color: #777;
+	opacity: 0.7;
+	margin:  0 auto;
+	margin-top:    100px;
+	margin-bottom: 100px;
+	margin-left:   -1px;
+	width:   100%;
+	text-align: center;
+      }
+      @media(max-width: 600px) {
+	footer {
+	  text-align: center;
+	}
+      }
+      @media(min-width: 601px) {
+	footer {
+	  text-align: left;
+	}
+      }
+      </style>
     </div>
   </body>
 </html>
